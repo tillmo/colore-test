@@ -1,0 +1,10 @@
+
+(cl-text http://colore.oor.net/orderings/tree.clif
+
+(cl-imports http://colore.oor.net/orderings/forest.clif)
+
+(exists (x)
+	(forall (y)
+		(leq x y)))
+
+)

@@ -1,0 +1,13 @@
+
+(cl-text http://colore.oor.net/ontologies/ordered_magma/linear_ordered_group
+
+(cl-imports http://colore.oor.net/ontologies/orderings/linear_ordering)
+
+(cl-imports http://colore.oor.net/ontologies/magma/group)
+
+(forall (x y z)
+	(if	(leq x y)
+		(and	(leq (op x z) (op y z))
+			(leq (op z x) (op z y)))))
+
+)

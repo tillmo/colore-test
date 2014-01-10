@@ -1,0 +1,12 @@
+
+(cl-text http://colore.oor.net/graphs/bipartite_graph.clif
+
+(cl-imports http://colore.oor.net/graphs/undirected_graph.clif)
+
+(cl-imports http://colore.oor.net/graphs/graph_def.clif)
+
+(forall (x y ...)
+	(if	(cycle x ... y)
+		(even_cycle x ... y)))
+
+)

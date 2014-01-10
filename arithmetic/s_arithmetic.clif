@@ -1,0 +1,18 @@
+(cl-text http://colore.oor.net/arithmetic/s_arithmetic.clif
+
+(forall (x)
+	(not (= (S x) zero)))
+
+(forall (x y)
+	(if	(= (S x) (S y))
+		(= x y)))
+
+(forall (y)
+	(if	(not (= y zero))
+		(exists (x)
+			(= y (S x)))))
+
+(forall (x)
+	(not (= x (S ...))))
+
+)

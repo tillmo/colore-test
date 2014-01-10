@@ -1,0 +1,12 @@
+
+(cl-text http://colore.oor.net/interval_psl/interval_nontrivial.clif
+
+(cl-imports http://colore.oor.net/interval_psl/interval_psl_core.clif)
+
+(forall (x)
+	(if	(or	(object x)
+			(activity_occurrence x))
+		(exists (t)
+			(psl_interval x t))))
+
+)

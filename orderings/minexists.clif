@@ -1,0 +1,11 @@
+
+(cl-text http://colore.oor.net/orderings/minexists.clif
+
+(cl-imports http://colore.oor.net/orderings/partial_ordering.clif)
+
+(exists (x)
+	(forall (y)
+		(not (lt y x))))
+
+)
+

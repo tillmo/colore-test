@@ -1,0 +1,11 @@
+
+(cl-text http://colore.oor.net/orderings/weak_order.clif
+
+(cl-imports http://colore.oor.net/orderings/partial_ordering.clif)
+
+(forall (x y z)
+	(if	(lt x y)
+		(or	(lt x z)
+			(lt z y))))
+
+)

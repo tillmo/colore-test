@@ -1,0 +1,26 @@
+
+(cl-text http://colore.oor.net/combinatorial_magma/definitions/words_def.clif
+
+(cl-imports http://colore.oor.net/combinatorial_magma/quasigroup_gen.clif)
+
+(forall (x y)
+	(iff	(subword x y)
+		(exists (u v)
+			(= y (op u (op x v))))))
+
+(forall (x y)
+	(iff	(initial_subword x y)
+		(exists (u)
+			(= y (op x u)))))
+
+(forall (x y)
+	(iff	(end_subword x y)
+		(exists (u)
+			(= y (op u x)))))
+
+(forall (x y z)
+	(iff	(append x y z)
+		(and	(generator x)
+			(= z (op x y)))))
+
+)

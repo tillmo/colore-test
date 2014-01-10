@@ -1,0 +1,19 @@
+
+(cl-text http://colore.oor.net/ontologies/ordered_arithmetic/oa.clif
+
+(cl-imports http://colore.oor.net/ontologies/ordering/discrete_forest.clif)
+
+(cl-imports http://colore.oor.net/ontologies/combinatorial_magma/definitions/words_def.clif)
+
+(forall (x y z w)
+	(if	(and	(generator y)
+			(append y z w))
+		(iff	(lt x w)
+			(leq x z))))
+
+(forall (x y)
+	(if	(lt x y)
+		(exists (z w)
+			(append z w y))))
+
+)

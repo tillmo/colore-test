@@ -1,0 +1,20 @@
+
+(cl-text http://colore.oor.net/combinatorial_magma/free_semigroup.clif
+
+(cl-imports http://colore.oor.net/combinatorial_magma/semigroup_gen.clif)
+
+(forall (x y z w)
+	(if	(= (op x y) (op z w))
+		(or	(and	(= x z)
+				(= y w))
+			(exists (u)
+				(or	(and	(= z (op x u))
+						(= y (op u w)))
+					(and	(= x (op z u))
+						(= w (op u y))))))))
+(forall (x y)
+	(if	(generator (op x y))
+		(or	(id x)
+			(id y))))
+
+)

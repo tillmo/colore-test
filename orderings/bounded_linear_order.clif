@@ -1,0 +1,10 @@
+
+(cl-text http://colore.oor.net/orderings/bounded_linear_order.clif
+
+(cl-imports http://colore.oor.net/orderings/linear_ordering.clif)
+
+(cl-imports http://colore.oor.net/orderings/minexists.clif)
+
+(cl-imports http://colore.oor.net/orderings/maxexists.clif)
+
+)

@@ -1,0 +1,33 @@
+
+(cl-text http://colore.oor.net/graphs/path_graph.clif
+
+(cl-imports http://colore.oor.net/graphs/undirected_graph.clif)
+
+(exists (x y)
+	(and	(path-endpoint x)
+		(path-endpoint y)
+		(forall (z)
+			(if	(path-endpoint z)
+				(or	(= z x)
+					(= z y))))))
+
+(forall (x)
+	(if	(not (path-endpoint x))
+		(exists (y z)
+			(and	(adj x y)
+				(adj x z)
+				(forall (w)
+					(if	(adj x w)
+						(or	(= w y)
+							(= w z))))))))
+
+(forall (x)
+	(iff	(path-endpoint x)
+		(exists (y)
+			(and	(adj x y)
+				(forall (z)
+					(if	(adj x z)
+						(= y z)))))))
+
+
+)
